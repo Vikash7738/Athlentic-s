@@ -1,0 +1,143 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block banner_slider %}
+<!--Banner Slider-->
+ <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'app/images/banner/b1.jpg' %}" class="d-block w-100" alt="..."> 
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/b2.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/b3.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'app/images/banner/b4.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+  <a href="#" class="float">
+    <i class="fa fa-plus my-float"></i>
+    </a></div>
+<!-- End Banner Slider -->
+{% endblock banner_slider %}
+
+{% block livesale %}
+<!-- Live Sale Section -->
+<div class="container">
+  <div class="row bg-danger text-center p-5 text-white border-bottom shadow">
+    <h1>REGISTRATION NOW</h1>
+    <span>To achieving the Goal</span>
+    <small class="fw-lighter">We provide you  such a great plateform for your talent</small>
+  </div>
+</div> 
+<!-- End Live Sale Section -->
+{% endblock livesale %}
+
+
+{% block main-content %}
+<div class="header">
+  
+  <h1 style="text-align: center; color: blue; margin: 10px; padding: 7px;">Games You Like.</h1>
+</div>
+<div class="row" style="padding-left:350px ; padding-right: 350px;">
+  <div class="column" style="display:flex;">
+    <a href="{% url 'highJump' %}"><img src="{% static 'app/images/games/highJump.png' %}" alt="" height="100px" style="margin:50px; cursor: pointer;">highJump</a>
+    <a href="#"><img src="{% static 'app/images/games/longjump.png' %}" alt="" height="100px" style="margin:50px; cursor: pointer;"></a>
+    <a href="#"><img src="{% static 'app/images/games/shoot.jpeg' %}" alt="" height="100px" style="margin:50px; cursor: pointer;"></a>
+    <a href="#"><img src="{% static 'app/images/games/run.png' %}" alt="" height="100px" style="margin:50px; cursor: pointer;"></a>
+    <a href="#"><img src="{% static 'app/images/games/archery.png' %}" alt="" height="100px" style="margin:50px; cursor: pointer;"></a>
+    
+  </div>
+  
+  
+</div>
+
+<!-- 1st Product Slider -->
+<div class="m-3">
+ <h2 style="text-align: center; color: blue;">Top 3 Player of all time in Indivisual Games </h2>
+ <!-- Slider 1 -->
+ <div class="owl-carousel" id="slider1">
+  <a href="{% url 'player_list' %}" class="btn"><div class="item"><img src="{% static 'app/images/product/1.jpg' %}" alt="" height="200px"><span class="fw-bold">Anshu</span><br><span class="fs-5">Run 100m (*1)</span></div></a>
+  <div class="item"><img src="{% static 'app/images/product/2.jpg' %}" alt="" height="200px"><span class="fw-bold">Sachin</span><br><span class="fs-5">Run 100m (*2)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/3.jpg' %}" alt="" height="200px"><span class="fw-bold">Abhay</span><br><span class="fs-5">Run 100m (*3)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/4.jpg' %}" alt="" height="200px"><span class="fw-bold">Satyam</span><br><span class="fs-5">Long Jump 22m (*1)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/5.jpg' %}" alt="" height="200px"><span class="fw-bold">Vikash</span><br><span class="fs-5">Long Jump 20m (*2)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/6.jpg' %}" alt="" height="200px"><span class="fw-bold">Shubham</span><br><span class="fs-5">Long Jump 19m (*3)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/7.jpg' %}" alt="" height="200px"><span class="fw-bold">Rakesh</span><br><span class="fs-5">High Jump 8ft (*1)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/8.jpg' %}" alt="" height="200px"><span class="fw-bold">Utkarsh</span><br><span class="fs-5">High Jump 7ft (*2)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/9.jpg' %}" alt="" height="200px"><span class="fw-bold">Golden</span><br><span class="fs-5">High Jump 6ft (*3)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/10.jpg' %}" alt="" height="200px"><span class="fw-bold">Affan</span><br><span class="fs-5">Archey 97pnt (*1)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/11.jpg' %}" alt="" height="200px"><span class="fw-bold">Mrityunajai</span><br><span class="fs-5">Archey 84pnt (*2)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/12.jpg' %}" alt="" height="200px"><span class="fw-bold">Om prakash</span><br><span class="fs-5">Archey 65pnt (*3)</span></div>
+ </div>
+</div>
+<!-- End 1st Product Slider -->
+
+<!-- Payment Info Section -->
+<!-- <div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+     <img src="{% static 'app/images/payavail/cc.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+      <img src="{% static 'app/images/payavail/upi.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+      <img src="{% static 'app/images/payavail/nb.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+  <div class="col-sm-3">
+   <div class="card mb-3">
+     <div class="card-body">
+      <img src="{% static 'app/images/payavail/bj.jpg' %}" alt="" srcset="" class="img-fluid">
+     </div>
+   </div>
+  </div>
+ </div>
+</div> -->
+<!-- End Payment Info Section -->
+{{form}}
+<!-- 2nd Product Slider -->
+<div class="mx-3">
+ <h2 style="text-align: center; color:blue;">Live Ranking Of Players</h2>
+ <!-- Slider 2 -->
+ <div class="owl-carousel" id="slider1">
+  <a href="{% url 'player_list' %}" class="btn"><div class="item"><img src="{% static 'app/images/product/1.jpg' %}" alt="" height="200px"><span class="fw-bold">Anshu</span><br><span class="fs-5">Run 100m (*1)</span></div></a>
+  <div class="item"><img src="{% static 'app/images/product/2.jpg' %}" alt="" height="200px"><span class="fw-bold">Sachin</span><br><span class="fs-5">Run 100m (*2)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/3.jpg' %}" alt="" height="200px"><span class="fw-bold">Abhay</span><br><span class="fs-5">Run 100m (*3)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/4.jpg' %}" alt="" height="200px"><span class="fw-bold">Satyam</span><br><span class="fs-5">Long Jump 22m (*1)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/5.jpg' %}" alt="" height="200px"><span class="fw-bold">Vikash</span><br><span class="fs-5">Long Jump 20m (*2)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/6.jpg' %}" alt="" height="200px"><span class="fw-bold">Shubham</span><br><span class="fs-5">Long Jump 19m (*3)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/7.jpg' %}" alt="" height="200px"><span class="fw-bold">Rakesh</span><br><span class="fs-5">High Jump 8ft (*1)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/8.jpg' %}" alt="" height="200px"><span class="fw-bold">Utkarsh</span><br><span class="fs-5">High Jump 7ft (*2)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/9.jpg' %}" alt="" height="200px"><span class="fw-bold">Golden</span><br><span class="fs-5">High Jump 6ft (*3)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/10.jpg' %}" alt="" height="200px"><span class="fw-bold">Affan</span><br><span class="fs-5">Archey 97pnt (*1)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/11.jpg' %}" alt="" height="200px"><span class="fw-bold">Mrityunajai</span><br><span class="fs-5">Archey 84pnt (*2)</span></div>
+  <div class="item"><img src="{% static 'app/images/product/12.jpg' %}" alt="" height="200px"><span class="fw-bold">Om prakash</span><br><span class="fs-5">Archey 65pnt (*3)</span></div>
+ </div>
+</div>
+<!-- End 2nd Product Slider -->
+{% endblock main-content %}

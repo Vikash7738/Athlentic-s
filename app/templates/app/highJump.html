@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block main-content %}
+<h1 style="padding-left: 30px;">high Jump</h1>
+<div class="row" style="padding-left:700px ; padding-right: 700px;">
+    <div class="column" style="display:flex;">
+      <a href="#"><img src="{% static 'app/images/games/camera.jpeg' %}" alt="" height="200px" style="margin:50px; cursor: pointer;"></a>
+      
+      
+    </div>
+    <h3 style="align-items:center; color: rgb(16, 200, 233);">Record video for this game</h3>
+    
+    
+  </div>
+ 
+<!-- <input type="file" capture="camera" accept="image/*" id="cameraInput" name="cameraInput">   -->
+{% endblock main-content %}
